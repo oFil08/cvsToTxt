@@ -1,6 +1,14 @@
 import csv
+import os
 
-csv_file_path = input("Jaka jest nazwa pliku cvs?");
+csv_file_path = None
+for file in os.listdir(os.path.dirname(__file__)):
+    if file.endswith(".csv"):
+        csv_file_path = os.path.join(os.path.dirname(__file__), file)
+        break
+
+if not csv_file_path:
+    raise FileNotFoundError("No CSV file found in the script's directory.")
 
 with open(csv_file_path, mode='r', newline='', encoding='utf-8') as file:
     with open("plik.txt", "w", encoding="utf-8") as filetxt:
