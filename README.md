@@ -1,0 +1,1 @@
+# wsadz plik csv razem z mainem do jakiegoś folderu i odpal program
