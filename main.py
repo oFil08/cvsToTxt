@@ -15,5 +15,5 @@ with open(csv_file_path, mode='r', newline='', encoding='utf-8') as filecvs:
         csv_reader = csv.reader(filecvs)
         
         for row in csv_reader:
-            filetxt.write(f"\"{row[1]}\" Autor: {row[2]}\n")
+            filetxt.write(f"\"{row[1]}\" - {row[2]}\n")
         
